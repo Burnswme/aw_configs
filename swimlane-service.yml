@@ -13,3 +13,12 @@ spring:
   jpa:
     hibernate: 
       ddl-auto: update
+    database: ORACLE
+    show-sql: true  
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true 
+  instance:
+    hostname: localhost
+    instance-id: ${spring.application.name}:${random.int}      
