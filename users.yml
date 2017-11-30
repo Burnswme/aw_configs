@@ -1,3 +1,6 @@
+spring:
+  application:
+    name: users
 server:
   context-path: /auth
   port: 8090
