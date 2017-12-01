@@ -2,7 +2,7 @@ server:
   port: 0
 spring:
   application:
-    name: swimlane-service
+    name: aw_history
   datasource:
     tomcat:
       initial-size: 1
