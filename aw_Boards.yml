@@ -13,10 +13,10 @@ spring:
   cloud:
     stream:
       bindings:
-        FcMessageSource:
-          destination: flashcardmessage1
-      default:
-        contentType: application/json
+        BoardUserRole:
+          destination: bur-rabbit
+        Swimlane:
+          destination: swimlane-rabbit
    
   mvc:
     dispatchOptionsRequest: true
