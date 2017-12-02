@@ -3,6 +3,20 @@
 spring:
   application:
     name: aw_Boards
+    
+  rabbitmq:
+    host=localhost
+    password=guest
+    username=guest
+    port=5672
+
+  cloud:
+    stream:
+      bindings:
+        FcMessageSource:
+          destination: flashcardmessage1
+      default:
+        contentType: application/json
    
   mvc:
     dispatchOptionsRequest: true
