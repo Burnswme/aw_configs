@@ -18,7 +18,7 @@ spring:
     
 server:
   context-path: /auth
-  port: 8090
+  port: 8007
 
 logging:
   level:
@@ -29,8 +29,10 @@ keystore:
   
 eureka:
   instance:
-    hostname: localhost
+    hostname: ${DOCKER_HOST_IP}:${server.port}
     instance-id: ${spring.application.name}:${server.port}
+    serviceUrl:
+      defaultZone: http://${DOCKER_HOST_IP}:8761/eureka/
 security:
   oauth2:
     resource:
