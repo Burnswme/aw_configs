@@ -38,9 +38,9 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     serviceUrl:
-      defaultZone: http://${DOCKER_HOST_IP}:8002/boards/
+      defaultZone: http://${DOCKER_HOST_IP:localhost}:8002/boards/
   instance:
-    hostname: ${DOCKER_HOST_IP:localhost} #:${server.port}
+    hostname: ${DOCKER_HOST_IP:localhost}:${server.port}
 #    hostname: localhost
     instance-id: ${spring.application.name}:${random.int}
 
