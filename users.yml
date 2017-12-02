@@ -29,15 +29,15 @@ keystore:
   
 eureka:
   instance:
-    hostname: ${DOCKER_HOST_IP}:${server.port}
+    hostname: ${DOCKER_HOST_IP:localhost}:${server.port}
     instance-id: ${spring.application.name}:${server.port}
     serviceUrl:
-      defaultZone: http://${DOCKER_HOST_IP}:8761/eureka/
+      defaultZone: http://${DOCKER_HOST_IP:localhost}:8761/eureka/
 security:
   oauth2:
     resource:
-      accessTokenUri: http://localhost:8090/auth/oauth/check_token
-      userAuthorizationUri: http://localhost:8090/auth/oauth/authorize
-      userInfoUri: http://localhost:8090/auth/user
+      accessTokenUri: http://${DOCKER_HOST_IP:localhost}:8090/auth/oauth/check_token
+      userAuthorizationUri: http://${DOCKER_HOST_IP:localhost}:8090/auth/oauth/authorize
+      userInfoUri: http://${DOCKER_HOST_IP:localhost}:8090/auth/user
       jwt:
-        keyUri: http://localhost:8090/auth/oauth/token_key  
+        keyUri: http://${DOCKER_HOST_IP:localhost}:8090/auth/oauth/token_key  
