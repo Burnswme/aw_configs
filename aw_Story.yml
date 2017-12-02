@@ -1,5 +1,5 @@
 server:
-  port: 0
+  port: 8003
 spring:
   application:
     name: aw_Story
@@ -21,8 +21,10 @@ eureka:
   client:
     register-with-eureka: true
     fetch-registry: true   
+    serviceUrl:
+      defaultZone: http://${DOCKER_HOST_IP}:8003/story/
   instance:
-    hostname: localhost
+    hostname: ${DOCKER_HOST_IP}:${server.port}
     instance-id: ${spring.application.name}:${random.int}
 security:
   oauth2:
