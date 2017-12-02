@@ -38,7 +38,7 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     serviceUrl:
-      defaultZone: http://${DOCKER_HOST_IP:localhost}:8002/boards/
+      defaultZone: http://${DOCKER_HOST_IP:localhost}:8761/eureka/
   instance:
     hostname: ${DOCKER_HOST_IP:localhost}:${server.port}
 #    hostname: localhost
