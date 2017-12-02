@@ -3,6 +3,21 @@ server:
 spring:
   application:
     name: aw_Story
+    
+  rabbitmq:
+    host: localhost
+    password: guest
+    username: guest
+    port: 5672
+
+  cloud:
+    stream:
+      bindings:
+        input:
+          destination: story-rabbit
+        Task:
+          destination: task-rabbit
+          
   datasource:
     tomcat:
       initial-size: 1
