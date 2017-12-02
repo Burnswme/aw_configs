@@ -1,5 +1,5 @@
 server:
-  port: 0
+  port: 8001
 spring:
   application:
     name: aw_BoardValidation
@@ -32,8 +32,10 @@ eureka:
   client:
     register-with-eureka: true
     fetch-registry: true
+    serviceUrl:
+      defaultZone: http://${DOCKER_HOST_IP}:8001/boardValidation/
   instance:
-    hostname: localhost
+    hostname: ${DOCKER_HOST_IP}:${server.port}
     instance-id: ${spring.application.name}:${random.int}
 security:
   oauth2:
