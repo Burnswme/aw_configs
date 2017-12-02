@@ -3,6 +3,19 @@ server:
 spring:
   application:
     name: tasks
+    
+  rabbitmq:
+    host: localhost
+    password: guest
+    username: guest
+    port: 5672
+
+  cloud:
+    stream:
+      bindings:
+        input:
+          destination: task-rabbit
+          
   datasource:
     tomcat:
       initial-size: 1
