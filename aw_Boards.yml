@@ -28,9 +28,8 @@ spring:
     username: meanbean_user
     password: p4ssw0rd
     driver-class-name: oracle.jdbc.OracleDriver
-    platform: org.hibernate.dialect.Oracle10gDialect
   jpa:
-    database: ORACLE
+    database-platform: org.hibernate.dialect.Oracle10gDialect
     show-sql: true
     
 eureka:
