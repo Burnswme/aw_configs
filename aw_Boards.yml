@@ -5,7 +5,7 @@ spring:
     name: aw_Boards
     
   rabbitmq:
-    host: automagic-rabbit
+    host: ${DOCKER_HOST_IP:automagic-rabbit:localhost}
     password: guest
     username: guest
     port: 5672
