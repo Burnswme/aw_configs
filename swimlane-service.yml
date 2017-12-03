@@ -50,11 +50,11 @@ security:
       jwt:
         keyUri: http://${DOCKER_HOST_IP:localhost}:8090/auth/oauth/token_key  
 
-logging:
-  level:
-    org.springframework.web: ERROR
-    com.revature.aw: INFO
-  pattern:
-    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
-    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
-  file: ./logs/aw_swimlane.log
+#logging:
+#  level:
+#    org.springframework.web: ERROR
+#    com.revature.aw: INFO
+#  pattern:
+#    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+#    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+#  file: ./logs/aw_swimlane.log
