@@ -33,11 +33,12 @@ eureka:
     instance-id: ${spring.application.name}:${server.port}
     serviceUrl:
       defaultZone: http://${DOCKER_HOST_IP:localhost}:8761/eureka/
-security:
-  oauth2:
-    resource:
-      accessTokenUri: http://${DOCKER_HOST_IP:localhost}:8090/auth/oauth/check_token
-      userAuthorizationUri: http://${DOCKER_HOST_IP:localhost}:8090/auth/oauth/authorize
-      userInfoUri: http://${DOCKER_HOST_IP:localhost}:8090/auth/user
-      jwt:
-        keyUri: http://${DOCKER_HOST_IP:localhost}:8090/auth/oauth/token_key  
+      
+#security:
+#  oauth2:
+#    resource:
+#      accessTokenUri: http://${DOCKER_HOST_IP:localhost}:8765/users/auth/oauth/check_token
+#      userAuthorizationUri: http://${DOCKER_HOST_IP:localhost}:8765/users/auth/oauth/authorize
+#      userInfoUri: http://${DOCKER_HOST_IP:localhost}:8765/us/auth/user
+#      jwt:
+#        keyUri: http://${DOCKER_HOST_IP:localhost}:8090/auth/oauth/token_key  
