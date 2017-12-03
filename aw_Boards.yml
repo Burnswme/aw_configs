@@ -30,7 +30,7 @@ spring:
     driver-class-name: oracle.jdbc.OracleDriver
     platform: oracle
   jpa:
-    database: ORACLE
+    database-platform: org.hibernate.dialect.Oracle10gDialect
     show-sql: true
     
 eureka:
