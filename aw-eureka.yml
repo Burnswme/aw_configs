@@ -10,8 +10,6 @@ eureka:
   client:
     register-with-eureka: false
     fetch-registry: false
-    serviceUrl:
-      defaultZone: http://${DOCKER_HOST_IP:localhost}:8761/eureka/
   datacenter: Tampa
   environment: Automagic
   
