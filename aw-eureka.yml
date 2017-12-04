@@ -1,11 +1,6 @@
 spring:
   application:
     name: aw-eureka
-  cloud:
-    inetutils:
-        preferredNetworks:
-          - automagic
-          - 52.15.89.219
 
 server:
   port: 8761
@@ -15,6 +10,9 @@ eureka:
   client:
     register-with-eureka: false
     fetch-registry: false
+  instance:
+    hostname: eureka
+    prefer-ip-address: true
   datacenter: Tampa
   environment: Automagic
   
