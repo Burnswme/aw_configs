@@ -1,6 +1,11 @@
 spring:
   application:
     name: aw-eureka
+  cloud:
+    inetutils:
+        preferredNetworks:
+          - automagic
+          - 52.15.89.219
 
 server:
   port: 8761
