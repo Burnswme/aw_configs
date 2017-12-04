@@ -10,6 +10,8 @@ eureka:
   client:
     register-with-eureka: false
     fetch-registry: false
+  instance:
+    hostname: ${DOCKER_HOST_IP:localhost}
   datacenter: Tampa
   environment: Automagic
   
