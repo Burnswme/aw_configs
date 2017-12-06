@@ -14,7 +14,7 @@ spring:
     platform: oracle
   jpa:
     database: ORACLE
-    show-sql: true
+    show-sql: false
     
 server:
   context-path: /auth
