@@ -29,7 +29,7 @@ keystore:
   
 eureka:
   instance:
-    hostname: ${DOCKER_HOST_IP:localhost}:${server.port}
+    hostname: ${DOCKER_HOST_IP:localhost}
     instance-id: ${spring.application.name}:${server.port}
   client:
     serviceUrl:
