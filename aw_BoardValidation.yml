@@ -27,7 +27,7 @@ spring:
     platform: oracle 
   jpa:
     database: ORACLE
-    show-sql: true           
+    show-sql: false           
 eureka:
   client:
     register-with-eureka: true
