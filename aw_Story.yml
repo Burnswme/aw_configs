@@ -31,7 +31,7 @@ spring:
     hibernate: 
       ddl-auto: update
     database: ORACLE
-    show-sql: true  
+    show-sql: false  
 eureka:
   client:
     register-with-eureka: true
@@ -49,13 +49,3 @@ security:
       userInfoUri: http://${DOCKER_HOST_IP:localhost}:8765/users/auth/user
       jwt:
         keyUri: http://${DOCKER_HOST_IP:localhost}:8765/users/auth/oauth/token_key    
-        
-        
-#logging:
-#  level:
-#    org.springframework.web: ERROR
-#    com.revature.aw: INFO
-#  pattern:
-#    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
-#    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
-#  file: ./logs/aw_story.log
