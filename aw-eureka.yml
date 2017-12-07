@@ -8,7 +8,7 @@ server:
 
 eureka:
   instance:
-    preferIpAddress: true
+    hostname: ${DOCKER_HOST_IP:localhost}
   client:
     register-with-eureka: false
     fetch-registry: false
