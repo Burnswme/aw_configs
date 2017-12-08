@@ -14,7 +14,7 @@ eureka:
   instance:
     hostname: ${DOCKER_HOST_IP:localhost}
     instance-id: ${spring.application.name}:${server.port}
-    #preferIpAddress: true
+    preferIpAddress: false
     
 zuul:
   routes:
