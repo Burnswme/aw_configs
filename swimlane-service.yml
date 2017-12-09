@@ -22,9 +22,9 @@ spring:
     tomcat:
       initial-size: 1
     max-active: 3  
-    url: jdbc:oracle:thin:@macguffin.cfs7tvzcxdyw.us-east-2.rds.amazonaws.com:1521/ORCL
-    username: macguffin_user
-    password: p4ssw0rd
+    url: ${DATABASE_3}
+    username: ${USER_DATABASE_3}
+    password: ${PW_DATABASE_3}
     driver-class-name: oracle.jdbc.OracleDriver 
 
   jpa:
