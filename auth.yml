@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: auth
+  mvc:
+    dispatchOptionsRequest: true
+  datasource:
+    tomcat:
+      initial-size: 1
+    max-active: 3  
+    url: jdbc:oracle:thin:@meanbean.cz7bznkyn7di.us-east-2.rds.amazonaws.com:1521:ORCL
+    username: meanbean_user
+    password: p4ssw0rd
+    driver-class-name: oracle.jdbc.OracleDriver
+    platform: oracle
+  jpa:
+    database: ORACLE
+    show-sql: false
+    
+server:
+  port: 8008
+
+logging:
+  level:
+    org.springframework.security: DEBUG
+  
+keystore:
+  password: automagic
+  
+eureka:
+  instance:
+    hostname: ${DOCKER_HOST_IP:localhost}
+    instance-id: ${spring.application.name}:${server.port}
+    preferIpAddress: false
+  client:
+    serviceUrl:
+      defaultZone: http://${DOCKER_HOST_IP:localhost}:8761/eureka/
+      
+#security:
+#  oauth2:
+#    resource:
+#      accessTokenUri: http://${DOCKER_HOST_IP:localhost}:8765/users/auth/oauth/check_token
+#      userAuthorizationUri: http://${DOCKER_HOST_IP:localhost}:8765/auth/oauth/authorize
+#      jwt:
+#        keyUri: http://${DOCKER_HOST_IP:localhost}:8765/users/auth/oauth/token_key 
