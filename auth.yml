@@ -17,7 +17,7 @@ spring:
     show-sql: false
     
 server:
-  port: 8008
+  port: 8007
 
 logging:
   level:
