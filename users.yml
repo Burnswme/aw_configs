@@ -23,9 +23,6 @@ logging:
   level:
     org.springframework.security: DEBUG
   
-keystore:
-  password: automagic
-  
 eureka:
   instance:
     hostname: ${DOCKER_HOST_IP:localhost}
