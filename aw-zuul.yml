@@ -18,10 +18,18 @@ eureka:
     
 zuul:
   routes:
+    auth:
+      path: /auth/**
+      sensitiveHeaders:
+      serviceId: auth
     users:
       path: /users/**
       sensitiveHeaders:
       serviceId: users    
+    swimlanes:
+      path: /swimlanes/**
+      sensitiveHeaders:
+      serviceId: swimlane-service   
 
 hystrix:
   command:
