@@ -8,7 +8,7 @@ spring:
       initial-size: 1
     max-active: 3  
     url: ${DATABASE_3}
-    username: ${DATABASE_USER_3}
+    username: ${USER_DATABASE_3}
     password: ${PW_DATABASE_3}
     driver-class-name: oracle.jdbc.OracleDriver 
     platform: oracle
