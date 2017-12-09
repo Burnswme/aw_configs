@@ -7,9 +7,9 @@ spring:
     tomcat:
       initial-size: 1
     max-active: 3  
-    url: jdbc:oracle:thin:@automagic.cf65nkvvhk0p.us-east-2.rds.amazonaws.com:1521/ORCL
-    username: automagic
-    password: password
+    url: ${DATABASE_2}
+    username: ${USER_DATABASE_2}
+    password: ${PW_DATABASE_2}
     driver-class-name: oracle.jdbc.OracleDriver 
 
   jpa:
