@@ -7,7 +7,7 @@ spring:
     tomcat:
       initial-size: 1
     max-active: 3  
-    url: ${DATABASE_3} #:jdbc:oracle:thin:@macguffin.cfs7tvzcxdyw.us-east-2.rds.amazonaws.com:1521:ORCL}
+    url: ${DATABASE_3}
     username: ${USER_DATABASE_3}
     password: ${PW_DATABASE_3}
     driver-class-name: oracle.jdbc.OracleDriver 
