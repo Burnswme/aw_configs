@@ -20,9 +20,9 @@ spring:
     tomcat:
       initial-size: 1
     max-active: 3  
-    url: ${DATABASE_1:jdbc:oracle:thin:@meanbean.cz7bznkyn7di.us-east-2.rds.amazonaws.com:1521:ORCL}
-    username: ${USER_DATABASE_1:meanbean_user}
-    password: ${PW_DATABASE_1:p4ssw0rd}
+    url: ${DATABASE_1}
+    username: ${USER_DATABASE_1}
+    password: ${PW_DATABASE_1}
     driver-class-name: oracle.jdbc.OracleDriver
     platform: oracle
   jpa: 
