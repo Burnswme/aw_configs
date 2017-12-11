@@ -17,9 +17,7 @@ spring:
           destination: bur-rabbit
         Swimlane:
           destination: swimlane-rabbit
-   
-  mvc:
-    dispatchOptionsRequest: true
+          
   datasource:
     tomcat:
       initial-size: 1
