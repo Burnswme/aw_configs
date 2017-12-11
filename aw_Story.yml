@@ -3,6 +3,8 @@ server:
 spring:
   application:
     name: aw_Story
+  mvc:
+    dispatchOptionsRequest: false
     
   rabbitmq:
     host: ${DOCKER_HOST_IP:localhost}
