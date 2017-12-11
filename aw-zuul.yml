@@ -31,11 +31,11 @@ zuul:
       sensitiveHeaders:
       serviceId: users
     validation:
-      path: /aw_boardvalidation/**
+      path: /validate/**
       sensitiveHeaders:
       serviceId: aw_BoardValidation
     boards:
-      path: /aw_boards/**
+      path: /boards/**
       sensitiveHeaders:
       serviceId: aw_Boards
     swimlanes:
@@ -43,7 +43,7 @@ zuul:
       sensitiveHeaders:
       serviceId: swimlane-service
     stories:
-      path: /aw_story/**
+      path: /stories/**
       sensitiveHeaders:
       serviceId: aw_Story
     tasks:
@@ -51,7 +51,7 @@ zuul:
       sensitiveHeaders:
       serviceId: tasks
     history:
-      path: /aw_history/**
+      path: /history/**
       sensitiveHeaders:
       serviceId: aw_history
 hystrix:
