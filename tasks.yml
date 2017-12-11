@@ -3,6 +3,8 @@ server:
 spring:
   application:
     name: tasks
+  mvc:
+    dispatchOptionsRequest: false
     
   rabbitmq:
     host: ${DOCKER_HOST_IP:localhost}
