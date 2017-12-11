@@ -3,6 +3,8 @@ server:
 spring:
   application:
     name: aw_BoardValidation
+  mvc:
+    dispatchOptionsRequest: false
     
   rabbitmq:
     host: ${DOCKER_HOST_IP:localhost}
