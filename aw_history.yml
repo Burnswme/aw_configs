@@ -3,6 +3,8 @@ server:
 spring:
   application:
     name: aw_history
+  mvc:
+    dispatchOptionsRequest: false
   datasource:
     tomcat:
       initial-size: 1
