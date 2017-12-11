@@ -3,6 +3,8 @@ server:
 spring:
   application:
     name: swimlane-service
+  mvc:
+    dispatchOptionsRequest: false
     
   rabbitmq:
     host: ${DOCKER_HOST_IP:localhost}
